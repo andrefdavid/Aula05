@@ -13,73 +13,73 @@ public class TeacherHelper {
 		Scanner leitor = new Scanner(System.in);
 		
 		while(opcao!=4) {
-			System.out.println("FERRAMENTA DE AUXÕLIO AO PROFESSOR!");
-			System.out.println("Selecione a opÁ„o desejada:");
-			System.out.println("1 - Calcular sal·rio");
-			System.out.println("2 - Calcular mÈdia de notas dos alunos");
-			System.out.println("3 - Exibir a motivaÁ„o do dia!");
+			System.out.println("FERRAMENTA DE AUX√çLIO AO PROFESSOR!");
+			System.out.println("Selecione a op√ß√£o desejada:");
+			System.out.println("1 - Calcular sal√°rio");
+			System.out.println("2 - Calcular m√©dia de notas dos alunos");
+			System.out.println("3 - Exibir a motiva√ß√£o do dia!");
 			opcao = leitor.nextInt();
 			
 			switch (opcao) {
 			case 1:
-				/*O sal·rio dos professores de escolas particulares em
-				 * S„o Paulo È composto da seguinte forma 
+				/*O sal√°rio dos professores de escolas particulares em
+				 * S√£o Paulo √© composto da seguinte forma 
 				 * http://www1.sinprosp.org.br/guia_consultas.asp?mat=8*/
-				System.out.println("Para calcular seu sal·rio base precisamos saber quantas aulas semanais o professor tem na instituiÁ„o");
+				System.out.println("Para calcular seu sal√°rio base precisamos saber quantas aulas semanais o professor tem na institui√ß√£o");
 				numeroAulas = leitor.nextInt();
 				salarioBase = numeroAulas * 4.5 * horaAula;
 				horaAtividade = salarioBase * 0.05;
 				descansoSemanalRemunerado = (salarioBase + horaAtividade) / 6;
 				salario = salarioBase + horaAtividade + descansoSemanalRemunerado;
 				
-				System.out.println("O sal·rio do professor est· composto da seguinte forma:");
-				System.out.println("Sal·rio base R$" + salarioBase);
+				System.out.println("O sal√°rio do professor est√° composto da seguinte forma:");
+				System.out.println("Sal√°rio base R$" + salarioBase);
 				System.out.println("Hora-atividade R$" + horaAtividade);
 				System.out.println("DSR R$" + descansoSemanalRemunerado);
-				System.out.println("Sal·rio total R$" + salario);
+				System.out.println("Sal√°rio total R$" + salario);
 				
 				break;
 			case 2:
-				System.out.println("Para calcularmos a mÈdia das notas dos alunos È preciso saber, primeiramente, quantos alunos est„o na turma:");
+				System.out.println("Para calcularmos a m√©dia das notas dos alunos √© preciso saber, primeiramente, quantos alunos est√£o na turma:");
 				qtdeAlunos = leitor.nextInt();
 				i = 0;
 				mediaAlunos=0;
 				while (i<qtdeAlunos) {
-					System.out.println("Digite a nota do " + (i+1) + "∫ aluno:");
+					System.out.println("Digite a nota do " + (i+1) + "¬∫ aluno:");
 					notaAluno = leitor.nextDouble();
 					mediaAlunos = mediaAlunos + notaAluno;
 				}
 				mediaAlunos = mediaAlunos / qtdeAlunos;
-				System.out.println("A mÈdia de notas dos alunos dessa turma È " + mediaAlunos);
+				System.out.println("A m√©dia de notas dos alunos dessa turma √© " + mediaAlunos);
 				
 				break;
 			case 3:
 				
 				switch(gerador.nextInt(7)) {
 				case 1:
-					System.out.println("VocÍ È um professor incrÌvel!");
+					System.out.println("Voc√™ √© um professor incr√≠vel!");
 					break;
 				case 2:
 					System.out.println("Que o seu dia seja produtivo!");
 					break;
 				case 3:
-					System.out.println("Que os seus alunos notem a paix„o com que vocÍ ensina!");
+					System.out.println("Que os seus alunos notem a paix√£o com que voc√™ ensina!");
 					break;
 				case 4:
 					System.out.println("Seu trabalho ajuda a fazer do mundo um lugar melhor!");
 					break;
 				case 5:
-					System.out.println("Quem ensina com o coraÁ„o cria um tesouro para a vida toda!");
+					System.out.println("Quem ensina com o cora√ß√£o cria um tesouro para a vida toda!");
 					break;
 				case 6:
-					System.out.println("Obrigado por se colocar ‡ disposiÁ„o do saber!");
+					System.out.println("Obrigado por se colocar √† disposi√ß√£o do saber!");
 					break;
 					
 				}
 				
 				break;
 			case 4:
-				System.out.println("Encerrando o sistema...");
+				System.out.println("Encerrando o sistema...heron");
 				break;
 				
 			}
